@@ -1,0 +1,249 @@
+.frame-48,
+.frame-48 * {
+  box-sizing: border-box;
+}
+.frame-48 {
+  background: #ffffff;
+  height: 3199px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-54 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 95%;
+  height: 20%;
+  position: absolute;
+  left: 3%;
+  top: 72px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.frame-50 {
+  background: #ffffff;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.3px;
+  width: 95%;
+  height: 99px;
+  position: absolute;
+  left: 3%;
+  top: 814px;
+  overflow: hidden;
+}
+.div {
+  color: #fd6438;
+  text-align: left;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  right: 85.33%;
+  left: 8.76%;
+  width: 5.91%;
+  bottom: 17.17%;
+  top: 17.17%;
+  height: 65.66%;
+}
+.div2 {
+  color: #fd6438;
+  text-align: left;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  right: 57.47%;
+  left: 36.62%;
+  width: 5.91%;
+  bottom: 19.19%;
+  top: 15.15%;
+  height: 65.66%;
+}
+.location {
+  width: 35px;
+  height: 47px;
+  position: absolute;
+  right: 92.73%;
+  left: 3.8%;
+  bottom: 26.26%;
+  top: 26.26%;
+  overflow: visible;
+}
+.div3 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Light", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+  position: absolute;
+  left: 42px;
+  top: 1056px;
+  width: 1416px;
+  height: 419px;
+}
+.div4 {
+  color: #000000;
+  text-align: left;
+  font-family: "Cairo-Bold", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  position: absolute;
+  left: 611px;
+  top: 934px;
+}
+.div5 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 178px;
+  top: 1604px;
+}
+.div6 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 724px;
+  top: 1604px;
+}
+.div7 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 1198px;
+  top: 1604px;
+}
+.r-300-0000 {
+  color: #009f22;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 219px;
+  top: 1669px;
+}
+._5 {
+  color: #009f22;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 777px;
+  top: 1680px;
+}
+._52 {
+  color: #009f22;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 1252px;
+  top: 1680px;
+}
+.frame-40 {
+  background: #ffffff;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.6px;
+  width: 1412px;
+  height: 121px;
+  position: absolute;
+  left: 42px;
+  top: 1874px;
+  overflow: hidden;
+}
+.div8 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 487px;
+  top: 28px;
+}
+.div9 {
+  color: #fb4a16;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 153px;
+  top: 28px;
+}
+.div10 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 807px;
+  top: 28px;
+}
+.div11 {
+  color: #000000;
+  text-align: center;
+  font-family: "Cairo-Medium", sans-serif;
+  font-size: 32px;
+  line-height: 65px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  position: absolute;
+  left: 1165px;
+  top: 28px;
+}
+.frame-55 {
+  background: #fb4a16;
+  width: 189px;
+  height: 8px;
+  position: absolute;
+  left: 655px;
+  top: 1019px;
+  overflow: hidden;
+}
+.frame-56 {
+  background: #ffffff;
+  width: 1500px;
+  height: 1145px;
+  position: absolute;
+  left: -2px;
+  top: 2054px;
+  overflow: hidden;
+}
