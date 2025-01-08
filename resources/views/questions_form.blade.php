@@ -53,10 +53,10 @@
 
 
         <div class="tog">
-            <a class="got" href="">
+            <a id="got" href="/">
                 <div >السابق</div>
             </a>
-            <a class="got" href="/info">
+            <a id="got" href="/info">
                 <div id="level1" >التالي</div>
             </a>
         </div>

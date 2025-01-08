@@ -6,6 +6,7 @@
         "Checkuserlogin",
         "currentpage",
         "douments",
+        "jetstream",
         "laravel",
         "newproject",
         "nexpage",
@@ -19,7 +20,8 @@
         "singup",
         "tailwindcss",
         "Useraccount",
-        "useraccounts"
+        "useraccounts",
+        "usersprojects"
     ],
     "git.ignoreLimitWarning": true
 }

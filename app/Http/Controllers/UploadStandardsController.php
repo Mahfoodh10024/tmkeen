@@ -12,11 +12,8 @@ class UploadStandardsController extends Controller
      */
     public function index()
     {
-        if(!Auth::check()){
-            return view('questions');
-        } else{
-            return view(view: 'create');
-        }
+        return view('questions');
+
     }
 
     /**

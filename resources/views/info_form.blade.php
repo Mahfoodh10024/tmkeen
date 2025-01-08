@@ -9,7 +9,7 @@
 </head>
 <body>
 
-        <form action="{{route('addproject.store')}}" method="post">
+        <form action="{{route('send')}}" method="post">
 
             @csrf
 

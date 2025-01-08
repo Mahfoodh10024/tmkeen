@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\users_projects;
+use App\Models\usersprojects;
 
 class home extends Controller
 {
@@ -11,7 +11,7 @@ class home extends Controller
      */
     public function index()
     {
-        $projects = users_projects::all();
+        $projects = usersprojects::all();
 
         return view('home' , compact('projects'));
     }

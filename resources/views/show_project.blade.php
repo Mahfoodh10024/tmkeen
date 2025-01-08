@@ -14,39 +14,63 @@
         
    
   <div class="frame-48">
-    <img class="frame-54" src="projects/frame-540.png" />
+
+    <img class="frame-54" src="Mainpage/frame-181.png" />
+
     <div class="frame-50">
       <div class="div">صنعاء</div>
       <div class="div2">صنعاء</div>
       <img class="location" src="projects/location0.svg" />
     </div>
 
-    <div class="div3">{{$pro['description']}}</div>
+    <div class="d1">
+      <div class="div4">{{$pro['name']}}</div>
+      <div class="div3">{{$pro['description']}}</div>
+    </div>
 
-    <div class="div4">{{$pro['name']}}</div>
 
-    <div class="div5">الميزانيه المطلوبه</div>
+    <div class="d2">
 
-    <div class="div6">الداعمين</div>
+      <div class="section">
+        <div class="t">الميزانيه المطلوبه</div>
+        <div class="value">RY{{$pro['budget']}}</div>
+      </div>
 
-    <div class="div7">الداعمين</div>
 
-    <div class="r-300-0000">RY{{$pro['budget']}}</div>
+      <div class="section">
+        <div class="t">الداعمين</div>
+        <div class="value">5</div>
+      </div>
+  
+  
+      <div class="section">
+          <div class="t">الداعمين</div>
+          <div class="value">5</div>
+      </div>
+  
+    </div>
 
-    <div class="_5">5</div>
-
-    <div class="_52">5</div>
 
     <div class="frame-40">
-      <div class="div8">الوثائق</div>
-      <div class="div9">ملخص</div>
-      <div class="div10">التعليقات</div>
-      <div class="div11">التنفيذ</div>
+      <a href="">
+        <div class="">التعليقات</div>
+      </a>
+
+      <a href="{{route('do',$pro['name'])}}">
+        <div class="">الوثائق</div>
+      </a>
+
+      <div class="">ملخص</div>
+      <div class="">التنفيذ</div>
     </div>
     
-    <div class="frame-55"></div>
     <div class="frame-56"></div>
   </div>
    @endforeach
+
+      <div class="pages">
+        @yield('content')
+      </div>
+
 </body>
 </html>

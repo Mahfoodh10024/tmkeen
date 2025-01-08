@@ -16,7 +16,7 @@
 
         <div class="div">تمكين</div>
 
-        <a href="questions">
+        <a href="addproject">
       <div id="div3" class="frame-18">
           <div id="div3" class="div3">إضافة مشروع</div>
         </div>
@@ -24,7 +24,7 @@
       
 
       <a href="/">
-        <div class="frame-8">
+        <div id="ho" class="frame-8">
           <div class="div2">الرئيسيه</div>
           <div class="h">
             <img src="Mainpage/hom.svg" alt="">
@@ -34,7 +34,7 @@
       
 
 
-      <a href="/projects">
+      <a href="/project">
         <div class="frame-14">
           <div class="div4">المشاريع</div>
           <img class="diamond" src="Mainpage/diamond0.svg" alt="icon"/>
@@ -44,7 +44,7 @@
 
 
 
-      <a href="">
+      <a href="/account">
         <div class="frame-16">
           <div class="div6">الحساب</div>
           <div class="h">

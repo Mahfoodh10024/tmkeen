@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\home;
+use App\Http\Controllers\routing;
 use App\Http\Controllers\Showproject;
 use App\Http\Controllers\UploadStandardsController;
-use App\Http\Controllers\UserProjectsController;
 use App\Http\Controllers\UsersAccountsController;
 use App\Http\Controllers\UsersProjectsController;
 use Illuminate\Support\Facades\Route;
@@ -24,17 +24,26 @@ use App\Http\Middleware\Checkuserlogin;
 //     return view('Home');
 // })->name(name: 'main');
 
-route::resource('/' , home::class);
 
 
-Route::get('/singup' , function(){
-    return view('create');
-})->name('create');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::resource('/' , home::class);
+});
 
 
-Route::get('/signin', function () {
-    return view(view: 'Login');
-})->name('login');
+
+// Route::get('/singup' , function(){
+//     return view('create');
+// })->name('create');
+
+
+// Route::get('/signin', function () {
+//     return view(view: 'Login');
+// })->name('login');
 
 
 
@@ -46,14 +55,14 @@ Route::get('/newproject', function () {
 
 
 
-Route::get('/home', function(){
-    return view('Home');
-})->name('home');
+// Route::get('/home', function(){
+//     return view('Home');
+// })->name('home');
 
 
-Route::get('/projects', function(){
-    return view('Projects');
-})->name('projects');
+Route::get('/project', function(){
+    return view('projects');
+})->name('project');
 
 
 Route::get('/info', function(){
@@ -64,17 +73,21 @@ Route::get('/info1', function(){
     return view('project_info1');
 })->name('info1');
 
+Route::get('/account' ,function() {
+    return view('account');
+});
+
+
+Route::get('docs/{name}' ,  [routing::class , 'docs'])->name('do');
 
 
 Route::get('showproject/{name}' , Showproject::class)->name('show');
 
-
-
 Route::resource('questions', UploadStandardsController::class);
 
-Route::resource('account', controller: UsersAccountsController::class);
+// Route::resource('account', controller: UsersAccountsController::class);
 
-Route::resource('addproject', controller: UsersProjectsController::class);
+Route::resource('addproject', UsersProjectsController::class)->name('store','send');
 
 
 

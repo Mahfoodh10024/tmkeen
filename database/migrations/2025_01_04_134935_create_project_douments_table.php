@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id'); // Primary Key
             $table->string('document_name');
             $table->string('document_type');
-            $table->foreignId('project_id')->constrained('users_projects');
+            // $table->foreignId('project_id')->constrained('users_projects');
             $table->timestamps();
         });
     }

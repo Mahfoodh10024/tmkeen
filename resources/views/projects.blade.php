@@ -1,6 +1,5 @@
 @extends('index')
 
-
 @section('title')
     Projcts
 @endsection

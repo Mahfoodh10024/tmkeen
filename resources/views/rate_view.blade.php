@@ -8,5 +8,7 @@
 </head>
 <body>
     
+    <h1>this is rate page</h1>
+
 </body>
 </html>

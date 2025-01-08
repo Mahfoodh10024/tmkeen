@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\user_projects;
+use App\Models\Usersprojects;
 use Illuminate\Http\Request;
+use PhpParser\Builder\Function_;
 
 class Showproject extends Controller
 {
@@ -12,7 +13,7 @@ class Showproject extends Controller
      */
     public function __invoke(Request $request)
     {
-        $project = user_projects::all()->where('name' , $request->name);
-        return view('show_project' , compact('project'));
+        $project = usersprojects::all()->where('name' , $request->name);
+        return view('rate' , compact('project'));
     }
 }

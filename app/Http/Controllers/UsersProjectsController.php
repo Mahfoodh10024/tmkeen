@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\users_accounts;
-use App\Models\users_projects;
+use App\Models\Usersprojects;
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class UsersProjectsController extends Controller
+class UsersprojectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,8 +29,8 @@ class UsersProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        $pro = new users_projects();
-        $user = users_accounts::findOrFail(1);
+        $pro = new usersprojects();
+        $user = User::findOrFail(1);
 
         $pro->name = $request->name;
         $pro->type = $request->type;
@@ -50,7 +50,7 @@ class UsersProjectsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(users_projects $user_projects)
+    public function show(usersprojects $user_projects)
     {
 
         return view('main',compact('user_projects'));
@@ -59,7 +59,7 @@ class UsersProjectsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(users_projects $users_projects)
+    public function edit(usersprojects $users_projects)
     {
         //
     }
@@ -67,7 +67,7 @@ class UsersProjectsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, users_projects $users_projects)
+    public function update(Request $request, usersprojects $users_projects)
     {
         //
     }
@@ -75,7 +75,7 @@ class UsersProjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(users_projects $users_projects)
+    public function destroy(usersprojects $users_projects)
     {
         //
     }

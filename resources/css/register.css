@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+body{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main{
+    width: 80%;
+    height: 780px;
+    background-color: #ffffff;
+    text-align: left;
+    font-family: "Cairo-Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    translate: 0 -15px;
+}
+
+
+form{
+    width: 45%;
+    height: 735px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    border-radius: 25px 0px 0px 25px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 1);
+}
+
+form input{
+    font-size: medium;
+    width: 280px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 2px;
+    border-color: #000000;
+    text-align: center;
+    translate: 10px -5px;
+}
+
+
+.side{
+    width: 30%;
+    height: 735px;
+    background-color: rgb(221, 221, 221);
+    position: sticky;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 0px 25px 25px 0px;
+    box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 1);
+}
+
+.reg{
+    width: 90%;
+    height: 80px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFFFFF;
+    translate: 0 35px;
+}
+
+.reg button{
+    width: 260px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: large;
+}
+
+.reg a{
+    font-size: medium;
+}
