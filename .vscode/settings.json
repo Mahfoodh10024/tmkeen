@@ -21,6 +21,7 @@
         "tailwindcss",
         "Useraccount",
         "useraccounts",
+        "Userprojects",
         "usersprojects"
     ],
     "git.ignoreLimitWarning": true

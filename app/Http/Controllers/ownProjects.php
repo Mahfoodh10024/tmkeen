@@ -1,20 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Projects;
-use Illuminate\Http\Request;
-use App\Models\usersprojects;
 
-class home extends Controller
+use App\Models\Projects;
+use App\Models\Usersprojects;
+use Auth;
+use Illuminate\Http\Request;
+
+class ownProjects extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $projects = Projects::all();
-
-        return view('home' , compact('projects'));
+        $projects = Auth::user()->ownProjects;
+        return view('projects' , compact('projects'));
     }
 
     /**
@@ -38,7 +39,6 @@ class home extends Controller
      */
     public function show(string $id)
     {
-        //
     }
 
     /**

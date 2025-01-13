@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usersprojects;
+use App\Models\Projects;
+use Auth;
 use Illuminate\Http\Request;
+use App\Models\Usersprojects;
 use App\Models\User;
+
 
 class UsersprojectsController extends Controller
 {
@@ -29,45 +32,60 @@ class UsersprojectsController extends Controller
      */
     public function store(Request $request)
     {
-        $pro = new usersprojects();
-        $user = User::findOrFail(1);
+        $userProjects = new usersprojects();
+        $projects = new Projects();
+        
 
-        $pro->name = $request->name;
-        $pro->type = $request->type;
-        $pro->budget = $request->budget;
-        $pro->description = $request->description;
-        $pro->paid = 'none';
-        $pro->project_status = 'reviewing';
-        $pro->project_period = 'none';
-        $pro->tools = 'none';
-        $pro->executer = 'none';
-        $pro->user_id = $user['id'];
-        $pro->save();
+        $userProjects->name = $request->name;
+        $userProjects->type = $request->type;
+        $userProjects->budget = $request->budget;
+        $userProjects->description = $request->description;
+        $userProjects->paid = 'none';
+        $userProjects->project_status = 'reviewing';
+        $userProjects->project_period = 'none';
+        $userProjects->tools = 'none';
+        $userProjects->executer = 'none';
+        $userProjects->user_id = Auth::id();
 
-        return $request;
+        
+        $projects->name = $request->name;
+        $projects->type = $request->type;
+        $projects->budget = $request->budget;
+        $projects->description = $request->description;
+        $projects->paid = 'none';
+        $projects->project_status = 'reviewing';
+        $projects->project_period = 'none';
+        $projects->tools = 'none';
+        $projects->executer = 'none';
+        $projects->user_id = Auth::id();
+
+
+        $userProjects->save();
+        $projects->save();
+
+        return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(usersprojects $user_projects)
+    public function show(string $id)
     {
-
         return view('main',compact('user_projects'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(usersprojects $users_projects)
+    public function edit(string $id)
     {
-        //
+    
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, usersprojects $users_projects)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -75,7 +93,7 @@ class UsersprojectsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(usersprojects $users_projects)
+    public function destroy(string $id)
     {
         //
     }

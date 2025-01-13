@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,7 @@
     
             <div class="inf">      
             <div class="">{{$pro->name}}</div>
-            <div class="">بواسطة| نجم علي</div>
+            <div class=""> {{$pro->user->name}} | بواسطة </div>
             <div class="">{{$pro->created_at}}</div></div>
     
             <div class="">{{$pro->budget}} :التمويل الحالي</div>

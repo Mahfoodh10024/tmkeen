@@ -1,48 +1,62 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
 
-        <x-validation-errors class="mb-4" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="jpKzDBlRShRiSdapem5wg7hrNgV72FfUnEDy6Nd9">
+        @vite(['/resources/css/logi.css' ,''])
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
+        <title>Laravel</title>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
+        <!-- Scripts -->
+        <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-B3q3GrOu.css" /><link rel="modulepreload" href="http://127.0.0.1:8000/build/assets/app-2eusNbXp.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-B3q3GrOu.css" data-navigate-track="reload" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-2eusNbXp.js" data-navigate-track="reload"></script>
+        <!-- Styles -->
+        <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
+    </head>
+    <body>
+            
+<div class="main">
+        <div class="form">
+            <form method="POST" action="http://127.0.0.1:8000/login">
 
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
+                <h4>تسجيل الدخول</h4>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+                @csrf
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
 
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+                {{-- <input type="hidden" name="_token" value="jpKzDBlRShRiSdapem5wg7hrNgV72FfUnEDy6Nd9" autocomplete="off"> --}}
+                <div>
+                    {{-- <label class="block font-medium text-sm text-gray-700" for="email">Email</label> --}}
+                    <input  class="" id="email" type="email" name="email" required="required" autofocus="autofocus" autocomplete="username" placeholder="البريد الالكتروني">
+                </div>
+    
+                <div class="mt-4">
+                    {{-- <label class="block font-medium text-sm text-gray-700" for="password">كلمة المرور</label> --}}
+                    <input  class="" id="password" type="password" name="password" required="required" autocomplete="current-password" placeholder="كلمة المرور">
+                </div>
+    
+                <div class="remember">
+                        <a class="" href="http://127.0.0.1:8000/forgot-password">نسيت كلمة السر؟</a><br>
+                        <input type="checkbox" class="" id="remember_me" name="remember">
+                        <span class="">تذكرني</span>
+                </div>
+    
+                <div class="sub">
+                    <button type="submit" class="">تسجيل</button>
+                    <a class="" href="http://127.0.0.1:8000/register">ليس لدي حساب</a>                    
+                </div>
+            </form>
+        </div>
+        </div>
+
+</div>
+
+        <!-- Livewire Scripts -->
+<script src="/livewire/livewire.js?id=951e6947"   data-csrf="jpKzDBlRShRiSdapem5wg7hrNgV72FfUnEDy6Nd9" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+    </body>
+</html>

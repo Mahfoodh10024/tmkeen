@@ -34,7 +34,7 @@
       
 
 
-      <a href="/project">
+      <a href="ownProject">
         <div class="frame-14">
           <div class="div4">المشاريع</div>
           <img class="diamond" src="Mainpage/diamond0.svg" alt="icon"/>
@@ -58,7 +58,7 @@
           <img class="profile" src="Mainpage/profile0.svg" />
         </div>
 
-        <a href="{{route('files')}}">
+        <a href="{{route('main')}}">
           <div class="frame-17">
             <div class="div7">الاعدادات</div>
             <img class="setting-2" src="Mainpage/setting-20.svg" />

@@ -13,7 +13,7 @@
     
     <div class="main">
 
-        <form action="" method="post">
+        <form action="" method="POST">
             <div class="d1">
                 <p>هل الفكره قابله لتنفيذ ؟</p>
                 <span class="arrow">▼</span>

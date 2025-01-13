@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\home;
+use App\Http\Controllers\OwnProjects;
 use App\Http\Controllers\routing;
 use App\Http\Controllers\Showproject;
 use App\Http\Controllers\UploadStandardsController;
@@ -20,9 +21,9 @@ use App\Http\Middleware\Checkuserlogin;
 |
 */
 
-// Route::get('/', function () {
-//     return view('Home');
-// })->name(name: 'main');
+Route::get('/pro', function () {
+    return view('profile.show');
+})->name(name: 'main');
 
 
 
@@ -60,9 +61,8 @@ Route::get('/newproject', function () {
 // })->name('home');
 
 
-Route::get('/project', function(){
-    return view('projects');
-})->name('project');
+Route::resource('ownProject' , OwnProjects::class);
+
 
 
 Route::get('/info', function(){
@@ -87,8 +87,9 @@ Route::resource('questions', UploadStandardsController::class);
 
 // Route::resource('account', controller: UsersAccountsController::class);
 
-Route::resource('addproject', UsersProjectsController::class)->name('store','send');
+Route::resource('/addproject', UsersProjectsController::class);
 
+// Route::post('send' , [UsersProjectsController::class , 'store'])->name('store');
 
 
 Route::get('/load', function () {
