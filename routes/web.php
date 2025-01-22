@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\addcomment;
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\home;
 use App\Http\Controllers\OwnProjects;
+use App\Http\Controllers\RequestFormController;
+use App\Http\Controllers\requestInfo;
 use App\Http\Controllers\routing;
 use App\Http\Controllers\Showproject;
 use App\Http\Controllers\UploadStandardsController;
@@ -48,9 +52,9 @@ Route::middleware([
 
 
 
-Route::get('/newproject', function () {
-    return view(view: 'add_project');
-})->name('project')->middleware(Checkuserlogin::class);
+// Route::get('/newproject', function () {
+//     return view(view: 'add_project');
+// })->name('project')->middleware(Checkuserlogin::class);
 
 
 
@@ -59,6 +63,7 @@ Route::get('/newproject', function () {
 // Route::get('/home', function(){
 //     return view('Home');
 // })->name('home');
+
 
 
 Route::resource('ownProject' , OwnProjects::class);
@@ -81,7 +86,7 @@ Route::get('/account' ,function() {
 Route::get('docs/{name}' ,  [routing::class , 'docs'])->name('do');
 
 
-Route::get('showproject/{name}' , Showproject::class)->name('show');
+Route::get('showproject/{id}' , Showproject::class)->name('show');
 
 Route::resource('questions', UploadStandardsController::class);
 
@@ -90,6 +95,12 @@ Route::resource('questions', UploadStandardsController::class);
 Route::resource('/addproject', UsersProjectsController::class);
 
 // Route::post('send' , [UsersProjectsController::class , 'store'])->name('store');
+
+Route::post('comments/{name}', [addcomment::class , 'store'])->name('comment');
+
+Route::resource('request', RequestFormController::class);
+
+Route::get('req/{name}' , [requestInfo::class ,'show'])->name('quest');
 
 
 Route::get('/load', function () {

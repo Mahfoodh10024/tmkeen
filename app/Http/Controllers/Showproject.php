@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\comments;
 use App\Models\Usersprojects;
 use Illuminate\Http\Request;
 use PhpParser\Builder\Function_;
@@ -11,9 +12,10 @@ class Showproject extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke($id)
     {
-        $project = usersprojects::all()->where('name' , $request->name);
-        return view('rate' , compact('project'));
+        $project = usersprojects::all()->where('id' , $id);
+        $comments = comments::all()->where('projects_id' , $id);
+        return view('rate' , compact('project' , 'comments'));
     }
 }

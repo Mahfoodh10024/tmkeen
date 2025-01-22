@@ -58,7 +58,7 @@
           <img class="profile" src="Mainpage/profile0.svg" />
         </div>
 
-        <a href="{{route('main')}}">
+        <a href="/request">
           <div class="frame-17">
             <div class="div7">الاعدادات</div>
             <img class="setting-2" src="Mainpage/setting-20.svg" />

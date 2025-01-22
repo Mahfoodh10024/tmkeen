@@ -1,0 +1,150 @@
+
+
+body{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.main-frame,
+.main-frame * {
+box-sizing: border-box;
+}
+.main-frame {
+width: 800px;
+height: 502px;
+border-style: solid;
+border-color: #000000;
+border-width: 1px;
+position: sticky;
+overflow: hidden;
+translate: 0 50px;
+border-radius: 10px;
+}
+.frame1 {
+width: 800px;
+height: 254px;
+position: absolute;
+left: 0px;
+top: 248px;
+overflow: hidden;
+background-color: #ffffff;
+}
+.head {
+color: #000000;
+text-align: left;
+font-family: "Inter-Bold", sans-serif;
+font-size: 20px;
+font-weight: 700;
+position: absolute;
+left: 696px;
+top: 10px;
+}
+.comment {
+background: #ffffff;
+width: 731px;
+height: 81px;
+position: absolute;
+left: 41px;
+top: 73px;
+box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 1);
+overflow: hidden;
+}
+.ali {
+color: #000000;
+text-align: left;
+font-family: "Inter-Regular", sans-serif;
+font-size: 15px;
+font-weight: 400;
+position: absolute;
+left: 20px;
+top: 14px;
+}
+._4 {
+color: #959595;
+text-align: left;
+font-family: "Inter-Light", sans-serif;
+font-size: 12px;
+font-weight: 300;
+position: absolute;
+left: 659px;
+top: 13px;
+}
+.div2a {
+color: #000000;
+text-align: left;
+font-family: "Inter-Light", sans-serif;
+font-size: 12px;
+font-weight: 300;
+position: absolute;
+left: 20px;
+top: 45px;
+}
+
+form {
+width: 800px;
+height: 233px;
+position: absolute;
+overflow: hidden;
+background-color: #ffffff;
+display: flex;
+align-items: flex-end;
+justify-content: space-evenly;
+justify-items: center;
+align-content: center;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+
+button {
+color: white;
+background: #000000;
+border-radius: 5px;
+width: 120px;
+height: 36px;
+}
+.div3 {
+color: #ffffff;
+text-align: left;
+font-family: "Inter-Bold", sans-serif;
+font-size: 20px;
+font-weight: 700;
+position: absolute;
+left: 33px;
+top: 6px;
+}
+.frame-88 {
+background: #bdbdbe;
+width: 799px;
+height: 7px;
+position: absolute;
+left: 0px;
+top: 237px;
+}
+
+
+.field {
+background: #ffffff;
+border-radius: 8px;
+border: #bdbdbe solid 2px;
+width: 733px;
+height: 141px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+}
+textarea{
+width: 100%;
+outline: none;
+border: none;
+text-align: center;
+padding-top: 10px;
+resize: none;
+}

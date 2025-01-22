@@ -10,9 +10,9 @@
   <title>Show</title>
 </head>
 <body>
+  
     @foreach ($project as $pro)
         
-   
   <div class="frame-48">
 
     <img class="frame-54" src="Mainpage/frame-181.png" />
@@ -68,9 +68,7 @@
   </div>
    @endforeach
 
-      <div class="pages">
         @yield('content')
-      </div>
 
 </body>
 </html>
