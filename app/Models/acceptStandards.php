@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class upload_standards extends Model
+class acceptStandards extends Model
 {
     use HasFactory;
+
+
+    protected $guarded =[];
+
 }

@@ -15,11 +15,19 @@ class addcomment extends Controller
             $comment->content = $request->content;
             $comment->projects_id = $name;
             // $comment->user_project_id = '14';
-            $comment->user = Auth::id();
+            $comment->user_id = Auth::id();
             $comment->save();
     
-            return redirect()->back();
+            return redirect()->refresh();
     
         }
+    }
+
+    public function delete($id){
+        $comment = new comments();
+
+        $comment::where('id' , $id)->delete();
+
+        return redirect()->back();
     }
 }

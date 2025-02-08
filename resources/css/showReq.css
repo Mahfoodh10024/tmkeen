@@ -35,6 +35,7 @@
   top: 110px;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 1);
   overflow: hidden;
+
 }
 .div {
   color: #fb4a16;
@@ -83,7 +84,7 @@
 
 .frame-90 {
   background: #ffffff;
-  width: 1028px;
+  width: 900px;
   height: 325px;
   overflow: hidden;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 1);
@@ -93,6 +94,7 @@
   justify-content: space-between;
   position: relative;
   margin-top: 25px;
+  border-radius: 15px;
 }
 
 
@@ -199,7 +201,7 @@
 }
 
 .info{
-  width: 850px;
+  width: 750px;
   height: 323px;
   background-color: white;
   display: flex;
@@ -211,4 +213,50 @@
 .info div{
   margin-left: 20px;
   margin-top: 20px;
+}
+
+.right{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+form{
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  translate: 0 64px;
+}
+
+form button{
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: larger;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+form button:hover{
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0px 0px 5px 0px #ff0202;
+  background-color: white;
+  color: black;
+}
+
+form button:hover:not(.bt){
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0px 0px 5px 0px #00d200;
+  background-color: white;
+  color: black;
 }

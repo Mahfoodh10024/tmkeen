@@ -15,7 +15,7 @@ body {
 }
 
 .form-container {
-    color: #00F635;
+    color: #02B228;
     width: 80%;
     margin: 30px auto;
     background-color: white;
@@ -111,7 +111,7 @@ input[type="checkbox"] {
 }
 
 button {
-    background-color: #ff5e00;
+    background-color: #F85B00;
     color:#ffffff;
     padding: 12px 15px;
     border: none;
@@ -124,8 +124,30 @@ button {
 }
 
 button:hover {
-    background-color: #e5673d;
+    background-color: #E33900;
 }
+
+a:last-child{
+    background-color: #000000;
+    color:#ffffff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 8%;
+    margin-top: 20px;
+    margin-left: 35%; 
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+
 
 textarea:focus,
 input:focus {

@@ -23,8 +23,9 @@
 
 
         <div class="forms">
+
           @foreach ($request as $item)
-          <a href="{{route('quest' , $item->project_name)}}">
+          <a href="{{route('requestinfo' , $item->project_name)}}">
             <div class="frame-90">
   
               <div class="info">
@@ -32,12 +33,30 @@
                 <div class="ali">{{$item->name}} | بواسطة</div>
               </div>
   
-              <a href="">
-                <div class="frame-93">
-                  <div class="">نسبة استيفاء الشروط</div>
-                  <div class="">33%</div>
-                </div>
-              </a>
+
+              <div class="right">
+
+                <a href="{{route('stand.show' , $item->project_name)}}">
+                  <div class="frame-93">
+                    <div class="">نسبة استيفاء الشروط</div>
+                    <div class="">33%</div>
+                  </div>
+                </a>
+
+                <form method="POST" action="{{route('requestAccept' , $item->project_name)}}">
+                  @csrf
+
+                  <button>قبول</button>
+                </form>
+
+                <form method="POST" action="{{route('requestDecline' , $item->project_name)}}">
+                  @csrf
+
+                  <button class="bt">رفض</button>
+                </form>
+
+              </div>
+
   
             </div>
           </a>

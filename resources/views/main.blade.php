@@ -45,8 +45,9 @@
   
   <div class="projects">
     @foreach ($projects as $pro)
-
-    <a href="{{route('show',$pro->id)}}">
+    
+    @if ($pro->project_status == 'accept')
+    <a  href="{{route('show',$pro->id)}}">
       <div class="frame-50">
         <img class="frame-182" src="Mainpage/frame-181.png" />
         <div class="frame-21">
@@ -70,6 +71,7 @@
         
       </div>
     </a>
+    @endif
 
     @endforeach
   </div>

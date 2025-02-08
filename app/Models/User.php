@@ -75,4 +75,8 @@ class User extends Authenticatable
         return $this->hasMany(comments::class);
     }
 
+    public function backing(){
+        return $this->hasMany(backing::class);
+    }
+
 }

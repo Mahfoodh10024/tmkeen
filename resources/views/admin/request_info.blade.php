@@ -216,12 +216,12 @@
 </div>
 
 
-<div class="label-contrrol">
+{{-- <div class="label-contrrol">
 <label class="title-label" for="fileUpload">تحميل الملفات</label>
 </div>
 <div class="form-group">
     no files
-</div>
+</div> --}}
 
 <div class="label-contrrol">    
 <label class="title-label">الموافقة على الشروط العامة أعلاه *</label>

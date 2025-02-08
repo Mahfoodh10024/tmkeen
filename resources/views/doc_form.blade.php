@@ -23,7 +23,7 @@
     </form>
 
     <div class="tog">
-        <a href="/info">
+        <a href="questions">
             <div>السابق</div>
         </a>
         <a href="/info1">

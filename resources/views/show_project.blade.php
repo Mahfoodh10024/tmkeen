@@ -12,16 +12,19 @@
 <body>
   
     @foreach ($project as $pro)
+    {{-- @foreach ($more as $moree) --}}
+        
         
   <div class="frame-48">
 
-    <img class="frame-54" src="Mainpage/frame-181.png" />
+    <img class="frame-54" src="\projects\frame-540.png" />
 
     <div class="frame-50">
-      <div class="div">صنعاء</div>
-      <div class="div2">صنعاء</div>
-      <img class="location" src="projects/location0.svg" />
+      <div class="div"></div>
+      <div class="div2"></div>
+      <img class="location" src="\projects\location0.svg" />
     </div>
+
 
     <div class="d1">
       <div class="div4">{{$pro['name']}}</div>
@@ -39,20 +42,32 @@
 
       <div class="section">
         <div class="t">الداعمين</div>
-        <div class="value">5</div>
+        <div class="value">{{$backers}}</div>
       </div>
   
   
       <div class="section">
-          <div class="t">الداعمين</div>
-          <div class="value">5</div>
+          <div class="t">الدعم</div>
+          <div class="value">RY {{$amount}}</div>
       </div>
-  
+
     </div>
+
+    
+
+
+    <form class="data" action="{{route('bee')}}" method="POST">
+      @csrf
+      <input name="name" value="{{$pro->user->name}}" type="hidden">
+      <input name="id" value="{{$pro->id}}" type="hidden">
+
+      <button class="sub">دعم هذا المشروع</button>
+    </form>
+    
 
 
     <div class="frame-40">
-      <a href="">
+      <a href="{{route('ratee' , $pro->id)}}">
         <div class="">التعليقات</div>
       </a>
 
@@ -66,9 +81,10 @@
     
     <div class="frame-56"></div>
   </div>
-   @endforeach
+
+  @endforeach
+  {{-- @endforeach --}}
 
         @yield('content')
-
 </body>
 </html>

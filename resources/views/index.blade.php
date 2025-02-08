@@ -16,7 +16,7 @@
 
         <div class="div">تمكين</div>
 
-        <a href="addproject">
+        <a href="request">
       <div id="div3" class="frame-18">
           <div id="div3" class="div3">إضافة مشروع</div>
         </div>
@@ -53,10 +53,13 @@
         </div>
       </a>
 
+
+      <a href="backing">
         <div class="frame-15">
           <div class="div5">الحساب</div>
           <img class="profile" src="Mainpage/profile0.svg" />
         </div>
+      </a>
 
         <a href="/request">
           <div class="frame-17">

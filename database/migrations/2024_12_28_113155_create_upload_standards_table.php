@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('question_number');
             $table->string('status');
-            // $table->foreignId('project_id')->constrained('user_projects','id');
+            $table->integer('value');
+            // $table->foreignId('project_id')->constrained('usersprojects','id');
             $table->timestamps();
         });
     }

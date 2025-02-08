@@ -20,4 +20,11 @@ class Usersprojects extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+
+    public function requestfrom(){
+        return $this->hasOne(requestForm::class);
+    }
+
+
 }

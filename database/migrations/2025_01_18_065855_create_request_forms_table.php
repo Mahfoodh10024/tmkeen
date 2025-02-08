@@ -48,7 +48,6 @@ return new class extends Migration
             $table->string('project_support');
             $table->string('policies');
             $table->foreignId('user_id')->constrained('users' ,'id');
-
             $table->timestamps();
 
         });

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('content');
-            $table->foreignId('user')->constrained('users',column: 'id');
+            $table->foreignId('user_id')->constrained('users',column: 'id');
             $table->foreignId('projects_id')->constrained('projects','id');
             $table->timestamps();
         });

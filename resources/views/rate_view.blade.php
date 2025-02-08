@@ -15,21 +15,33 @@
 
     <div class="frame1">
 
-      <div class="head">التعليقات</div>
+      {{-- <div class="head">التعليقات</div> --}}
 
-      @foreach ($comments as $comment)
-      <div class="comment">
-        <div class="ali">{{$comment->content}}</div>
-        <div class="_4">{{$comment->created_at}}</div>
-        <div class="div2a">{{$comment->content}}</div>
+      <div class="com">
+
+        @foreach ($comments as $comment)
+
+        <div class="comment">
+          <div class="ali">{{$comment->user->name}}</div>
+          <div class="_4">{{$comment->created_at}}</div>
+          <div class="div2a">{{$comment->content}}</div>
+
+          @if (Auth::id() == $comment->user_id)
+          <a class="delete" href="{{route('commentdelete' , $comment->id)}}" class="delete">حذف</a>
+          @endif
+          @if (Auth::id() != $comment->user_id)
+          {{-- <a hidden class="delete">Delete</a> --}}
+          @endif
+
+        </div>
+        @endforeach
       </div>
-      @endforeach
 
     </div>
 
     @foreach ($project as $item)
         
-    <form action="{{route('comment', $item->id)}}" method="Post">
+    <form action="{{route('comment', $item->id)}}" method="Post" class="add">
 
 
       @csrf

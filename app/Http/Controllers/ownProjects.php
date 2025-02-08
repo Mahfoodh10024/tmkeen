@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\backing;
+use App\Models\comments;
 use App\Models\Projects;
 use App\Models\Usersprojects;
+use App\Models\requestForm;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -37,8 +40,15 @@ class ownProjects extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
+        $project = Projects::all()->where('id' , $id);
+        // $more = requestForm::where('id' , $id)->get();
+        $amount = Projects::find($id)->backs()->sum('backing_amount');
+        $backers = Projects::find($id)->user();
+
+        // $backers = backing::
+        return view( 'manage_project' , compact('project' ,'amount' , 'backers'));
     }
 
     /**

@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\acceptStandards;
 use App\Models\requestForm;
+use App\Models\Usersprojects;
+use App\Models\Projects;
 use Auth;
 use Illuminate\Http\Request;
+use Session;
+
 
 class RequestFormController extends Controller
 {
@@ -59,10 +64,42 @@ class RequestFormController extends Controller
         $form->user_id = Auth::id();
         $form->save();
 
+        
+        $userProjects = new usersprojects();
+        $projects = new Projects();
+        
 
-        return $request;
+        $userProjects->name = $request['project_name'];
+        $userProjects->type = $request['type'];
+        $userProjects->budget = $request['budget'];
+        $userProjects->description = $request['project_summary'];
+        $userProjects->paid = 'none';
+        $userProjects->project_status = 'reviewing';
+        $userProjects->project_period = 'none';
+        $userProjects->tools = 'none';
+        $userProjects->executer = 'none';
+        $userProjects->user_id = Auth::id();
 
         
+        $projects->name = $request['project_name'];
+        $projects->type = $request['type'];
+        $projects->budget = $request['budget'];
+        $projects->description = $request['project_summary'];
+        $projects->paid = 'none';
+        $projects->project_status = 'reviewing';
+        $projects->project_period = 'none';
+        $projects->tools = 'none';
+        $projects->executer = 'none';
+        $projects->user_id = Auth::id();
+
+
+        $userProjects->save();
+        $projects->save();
+
+        session(['project_name'=>$request['project_name']]);
+
+        return redirect()->back()->withoutFragment();
+
 
     }
 

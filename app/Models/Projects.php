@@ -22,5 +22,14 @@ class Projects extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function requestfrom(){
+        return $this->hasOne(requestForm::class);
+    }
+
+    public function backs(){
+        return $this->hasMany(backing::class);
+    }
+    
+
 
 }

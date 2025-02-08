@@ -147,6 +147,20 @@
   <input name="project_name" type="text" id="projectTitle" placeholder="أدخل عنوان المشروع" required>
 </div>
 
+<div class="label-ontrrol" >
+    <label  class="title-label">الميزانيه المتوقعه *</label>
+</div>
+ <div class="form-group">
+  <input name="budget" type="text" id="projectTitle" placeholder="أدخل عنوان المشروع" required>
+</div>
+
+<div class="label-ontrrol" >
+    <label  class="title-label">نوع المشروع *</label>
+</div>
+ <div class="form-group">
+  <input name="type" type="text" id="projectTitle" placeholder="أدخل عنوان المشروع" required>
+</div>
+
 <!-- //////////////////////////////////////// -->
 <div class="label-contrrol">
   <label  class="title-label">هل لديك نموذج أولي *</label>
@@ -220,7 +234,9 @@
 <div class="label-contrrol">
 <label class="title-label">هل لديك ابتكار/اختراع؟ *</label>
 </div>
-<p>إذا كنت تريد التسجيل بطلب براءة اختراع يمكنك الإجابة عن التالي:</p>
+<label>إذا كنت تريد التسجيل بطلب براءة اختراع يمكنك الإجابة عن التالي:</label>
+<br>
+<br>
 
 <div class="form-group">
 <div>
@@ -239,14 +255,14 @@
 <!-- </div> -->
 
 <!-- ///////////////////////////////////////////////////////////////// -->
-<div class="label-contrrol">
+{{-- <div class="label-contrrol">
 <label class="title-label" for="fileUpload">تحميل الملفات</label>
 </div>
 <div class="form-group">
 <input type="file" id="fileUpload" multiple>
 <!-- <p>Click or drag files to this area to upload.<br> You can upload up to 20 files.</p> -->
 </div>
-<!-- </div>  -->
+<!-- </div>  --> --}}
 
 <!-- //////////////////////////////////////////////////// -->
 <div class="label-contrrol">    
@@ -261,7 +277,9 @@
 
 <!-- ///////////////////////////////////////////////////////////// -->
 <button type="submit">إرسال</button>
+
 </form>
+<a href="addproject">التالي</a>
 
 </div>
 </body>
