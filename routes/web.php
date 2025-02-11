@@ -73,9 +73,9 @@ Route::resource('ownProject' , OwnProjects::class);
 
 
 
-// Route::get('/info', function(){
-//     return view('project_info');
-// })->name('info');
+Route::get( 'tes', function(){
+    return view('test');
+})->name('tester');
 
 Route::get('/info1', function(){
     return view('project_info1');

@@ -24,9 +24,8 @@
 
             @csrf
 
-        <div class="label-contrrol">
-                <label  class="title-label">البيانات الشخصية *</label>
-        </div>
+    <div class="label-contrrol"><label  class="title-label">البيانات الشخصية *</label></div>
+
         <div class="form-group-one">
             <div class="form-group">
                 <label for="name">الاسم *</label>
@@ -38,13 +37,13 @@
             </div>
         </div>
 
-        <div class="label-contrrol">
+        {{-- <div class="label-contrrol">
                 <label  class="title-label">الجنس *</label>
         </div>
         <div class="man-women">
                     <label><input type="radio" name="gender" value="ذكر"> ذكر</label>
                     <label><input type="radio" name="gender" value="أنثى"> أنثى</label>
-        </div>
+        </div> --}}
         <div class="label-contrrol" >
                 <label class="title-label">الفئة العمرية *</label>
         </div>
@@ -131,40 +130,33 @@
             <label for="workplace">جهة العمل *</label>
             <input name="workplace" type="text" id="workplace" required>
         </div>
-           <div class="form-group">
+           {{-- <div class="form-group">
                 <label for="job">الوظيفة *</label>
                 <input name="job" type="text" id="job" required>
-           </div>
+           </div> --}}
      </div>  
     </div>
            <!-- </div> -->
 <!-- //////////////////////////////////////////////////////////////////////////
   -->
-  <div class="label-ontrrol" >
-    <label  class="title-label">عنوان الابتكار أو المشروع *</label>
-</div>
+  <div class="label-ontrrol" > <label  class="title-label">عنوان الابتكار أو المشروع *</label></div>
  <div class="form-group">
   <input name="project_name" type="text" id="projectTitle" placeholder="أدخل عنوان المشروع" required>
 </div>
 
-<div class="label-ontrrol" >
-    <label  class="title-label">الميزانيه المتوقعه *</label>
-</div>
+<div class="label-ontrrol" ><label  class="title-label">الميزانيه المتوقعه *</label></div>
  <div class="form-group">
   <input name="budget" type="text" id="projectTitle" placeholder="أدخل عنوان المشروع" required>
 </div>
 
-<div class="label-ontrrol" >
-    <label  class="title-label">نوع المشروع *</label>
+<div class="label-ontrrol" ><label  class="title-label">نوع المشروع *</label>
 </div>
  <div class="form-group">
   <input name="type" type="text" id="projectTitle" placeholder="أدخل عنوان المشروع" required>
 </div>
 
 <!-- //////////////////////////////////////// -->
-<div class="label-contrrol">
-  <label  class="title-label">هل لديك نموذج أولي *</label>
-</div>
+<div class="label-contrrol"><label  class="title-label">هل لديك نموذج أولي *</label></div>
   <div>
       <label><input type="radio" name="current_model" value="مكتمل" > نعم، وهو مكتمل</label>
       <label><input type="radio" name="current_model" value="غير مكتمل"> نعم، لكنه غير مكتمل تماما وبحاجة للتحسين</label>
@@ -172,10 +164,9 @@
       <label><input type="radio" name="current_model" value="لا"> لا</label>
 <!-- </div> -->
 </div>
+
 <!-- ///////////////////////////////////////////////////// -->
-<div class="label-contrrol">
-  <label class="title-label">هل تستطيع تنفيذ فكرتك *</label>
-</div>
+<div class="label-contrrol"><label class="title-label">هل تستطيع تنفيذ فكرتك *</label></div>
   <div>
       <label><input type="radio" name="workable" value="نعم" > نعم</label>
       <label><input type="radio" name="workable" value="مساعدة"> نعم، لكن أحتاج إلى مساعدة</label>
@@ -184,16 +175,14 @@
 <!-- </div> -->
 <!-- </div> -->
 <!-- ////////////////////////////////////////////////////////////////////////// -->
-<div class="label-contrrol">
-<label class="title-label" for="summary">ملخص الابتكار أو المشروع *</label>
-</div>
+<div class="label-contrrol"><label class="title-label" for="summary">  مخرجات المشروع *</label></div>
 <div class="form-group">
   <textarea id="summary" name="project_summary" rows="4" placeholder="أدخل ملخص المشروع" required></textarea>
 </div>
 
 <!-- ///////////////////////////////////////////////////////////// -->
 <div class="label-contrrol">
-<label class="title-label" for="challenges">أهم المعوقات التي واجهتك (إن وجدت)</label>
+<label class="title-label" for="challenges">   التحديات *(إن وجدت)</label>
 </div>
 <div class="form-group">
   <textarea id="challenges" name="obstacles" rows="4" placeholder="أدخل المعوقات (إن وجدت)"></textarea>

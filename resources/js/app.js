@@ -2,6 +2,8 @@ import './bootstrap';
 
 
 const btn = document.getElementById('div3');
+const type = document.getElementById('dialoger');
+const close = document.getElementById('close');
 
 
 btn.addEventListener('mouseover', ()=>{
@@ -11,6 +13,15 @@ btn.addEventListener('mouseover', ()=>{
 btn.addEventListener('mouseleave', ()=>{
     btn.innerHTML = 'إضافة مشروع';
 });
+
+btn.addEventListener('click' , ()=>{
+    type.style.display = 'flex';
+});
+
+close.addEventListener('click' , ()=>{
+    type.style.display ='none';
+});
+
 
 
 // add project

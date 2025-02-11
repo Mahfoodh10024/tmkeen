@@ -12,15 +12,29 @@
   </head>
   <body>
 
+
+    <div id="dialoger" class="dialoger">
+
+      <div id="close" class="close">X</div>
+
+      <a href="request">
+        <div>افراد</div>
+      </a>
+      <a href="tes">
+        <div>مجموعه</div>
+      </a>
+      <a href="">
+        <div>شركات</div>
+      </a>
+    </div>
+
       <div class="frame-2">
 
         <div class="div">تمكين</div>
 
-        <a href="request">
       <div id="div3" class="frame-18">
           <div id="div3" class="div3">إضافة مشروع</div>
         </div>
-      </a>
       
 
       <a href="/">

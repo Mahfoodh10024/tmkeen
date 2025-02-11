@@ -7,14 +7,13 @@
   
 
 body{
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: center;
     height: 100vh;
     display: flex;
+    justify-content: center;
 }
 
 .progress{

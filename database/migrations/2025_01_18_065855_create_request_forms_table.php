@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('user_id_card')->unique();
 
-            $table->string('gender');
+            // $table->string('gender');
             $table->string('age');
 
             $table->string('state');
@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('Specialty');
 
             $table->string('work');
-            $table->string('job');
+            // $table->string('job');
 
             $table->string('project_name');
             $table->string('current_model');
